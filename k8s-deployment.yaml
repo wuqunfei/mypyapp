@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-python-deployment
+  name: hello-python
 spec:
-  replicas: 3
   selector:
     matchLabels:
-      app: python-app
+      app: hello-python
+  replicas: 2
   template:
     metadata:
       labels:
-        app: python-app
+        app: hello-python
     spec:
       containers:
-      - name: my-python-app
-        image: coffeepay/mypyapp
-        imagePullPolicy: Always
+      - name: hello-python
+        image: coffeepay/mypyapp:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
