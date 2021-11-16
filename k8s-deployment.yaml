@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-python-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: python-app
@@ -13,7 +13,7 @@ spec:
         app: python-app
     spec:
       containers:
-      - name: mypyapp
+      - name: my-python-app
         image: coffeepay/mypyapp
         imagePullPolicy: Always
         ports:
