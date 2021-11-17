@@ -16,7 +16,7 @@ spec:
       containers:
       - name: hello-python
         image: proddstrainingrcaq.azurecr.io/mypyapp:latest
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
         resources:
