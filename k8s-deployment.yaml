@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: coffeepay/mypyapp:latest
+        image: proddstrainingrcaq.azurecr.io/mypyapp:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
